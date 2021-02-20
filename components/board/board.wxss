@@ -1,0 +1,64 @@
+/* components/Board/board.wxss */
+@import '/utils/iconfont.wxss';
+
+.boardPage{
+    background-color: #FFF;
+    border-radius: 8rpx;
+    box-shadow: 0 4rpx 12rpx 0 rgba(0,0,0,0.16);
+    padding-bottom: 40rpx;
+}
+.outer-board-container {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 5%;
+}
+.board-title {
+    height: 16rpx;
+    width: 50%;
+    background-image: linear-gradient(rgb(192,206,249),rgb(131,155,251));
+    position: absolute;
+    top: -8rpx;
+    left:25%;
+    border-radius: 10rpx;
+}
+.board-top-container {
+    width: 100%;
+    height: 40%;
+    padding: 16rpx 0 0 0;
+}
+.board-top-container .board-total {
+    height: 100rpx;
+    text-align: center;
+    color: rgb(131,155,251);
+    font-size: 72rpx;
+}
+.board-top-container .board-order {
+    text-align: center;
+    font-size: 32rpx;
+    margin-top: 8rpx;
+}
+.board-classify-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.row-style {
+    justify-content: space-between;
+}
+.col-style {
+    justify-content: space-around;
+}
+.board-classify-container view {
+    padding: 0 0 0 76rpx;
+    font-size: 26rpx;
+}
+.board-classify-container .interval {
+    padding: 8rpx 74rpx;
+}
+.board-classify-container icon {
+    width: 30rpx;
+    height: 30rpx;
+    font-size: 30rpx;
+    margin-right: 15rpx;
+}

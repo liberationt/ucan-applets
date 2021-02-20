@@ -1,0 +1,31 @@
+<!--components/Board/board.wxml-->
+<view class="boardPage">
+    <view class="outer-board-container">
+        <view class="board-title"></view>
+        <view class="board-container">
+            <view class="board-top-container">
+                <view class="board-total">{{boardObj.num}}</view>
+                <view class="board-order">{{boardObj.orderStatusName}}</view>
+            </view>
+            <view class="board-classify-container row-style">
+                <view wx:if="{{boardObj.toBeServed || boardObj.toBeServed === 0}}" class="{{boardObj.orderStatusName === '今日工单' ? 'interval' : ''}}">
+                    <icon class="iconfont iconSigndaifuwu"></icon>
+                    <text>待服务 {{boardObj.toBeServed}}</text>
+                </view>
+                <view wx:if="{{boardObj.serviceComplete || boardObj.serviceComplete === 0}}" class="{{boardObj.orderStatusName === '今日工单' ? 'interval' : ''}}">
+                    <icon class="iconfont iconSignfuwuwancheng1"></icon>
+                    <text>服务完成 {{boardObj.serviceComplete}}</text>
+                </view>
+                <view wx:if="{{boardObj.serving || boardObj.serving === 0}}" class="{{boardObj.orderStatusName === '今日工单' ? 'interval' : ''}}">
+                    <icon class="iconfont iconSignfuwuzhong"></icon>
+                    <text>服务中 {{boardObj.serving}}</text>
+                </view>
+                <view wx:if="{{boardObj.serviceFailed || boardObj.serviceFailed === 0}}" class="{{boardObj.orderStatusName === '今日工单' ? 'interval' : ''}}">
+                    <icon class="iconfont iconSignfuwushibai"></icon>
+                    <text>服务失败 {{boardObj.serviceFailed}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+

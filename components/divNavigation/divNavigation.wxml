@@ -1,0 +1,16 @@
+<!--components/divNavigation/divNavigation.wxml-->
+<view style="height:{{navHeight}}px"></view>
+<view class="navigation" style="height:{{navHeight}}px;background-color:{{bgColor}};color:{{color}}">
+    <view class="nav" style="margin-top:{{navTop}}px;height:{{navHeight - navTop}}px;">
+        <view class="nomarl" wx:if="{{navType === 'icon'}}">
+            <image src="/static/images/back.png" bindtap="back"></image>
+            <text>{{titleName}}</text>
+        </view>
+        <view class="image" wx:if="{{navType === 'logo'}}">
+            <image src="/static/images/logo.png"></image>
+        </view>
+        <view class="title" wx:if="{{navType !== 'icon'}}">
+            <text>友康养老服务</text>
+        </view>
+    </view>
+</view>

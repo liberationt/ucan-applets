@@ -1,0 +1,33 @@
+<!--pages/myInfo/myInfo.wxml-->
+<divNavigation titleName="个人信息" navType="icon" bgColor="rgb(244,244,244)" color="rgb(34,34,34)"></divNavigation>
+<view class="myInfoPage">
+    <view class="content">
+        <view class="row">
+            <view class="left">头像:</view>
+            <view class="right">
+                <image src="{{avatarUrl}}"></image>
+            </view>
+        </view>
+        <view class="row">
+            <view class="left">姓名:</view>
+            <view class="right">
+                {{userInfo.loginName}}
+            </view>
+        </view>
+        <view class="row">
+            <view class="left">手机号:</view>
+            <view class="right">
+                {{userInfo.mobile}}
+            </view>
+        </view>
+        <view class="row">
+            <view class="left">身份证号:</view>
+            <view class="right">
+                {{userInfo.idCard}}
+            </view>
+        </view>
+    </view>
+    <view class="btn">
+        <button bindtap="exitLogin">退出登录</button>
+    </view>
+</view>

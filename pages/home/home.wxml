@@ -1,0 +1,30 @@
+<divNavigation navType="logo" bgColor="#839BFB" color="#FFF"></divNavigation>
+<view class="home">
+    <view class="header">
+        <view class="header-container">
+            <image src="{{avatarUrl}}" alt=""></image>
+            <view class="header-info">
+                <text>{{userInfo.loginName}}</text>
+                <text>{{userInfo.mobile}}</text>
+            </view>
+            <view class="header-right">
+                <image src="/static/images/ling.png" bindtap="toMessagePage"></image>
+                <view class="red-point" hidden="false"></view>
+            </view>
+        </view>
+    </view>
+    <view class="container">
+        <view class="today-work-order">
+            <myBoard boardObj="{{data.today}}" bindtap="toOrderList" data-tabIndex="1"></myBoard>
+        </view>
+        <view class="history-work-order" bindtap="toOrderList" data-tabIndex="2">
+            <myBoard boardObj="{{data.old}}"></myBoard>
+        </view>
+        <view class="future-work-order">
+            <myBoard boardObj="{{data.future}}" bindtap="toOrderList" data-tabIndex="3"></myBoard>
+        </view>
+        <view class="footer">
+            <image src="/static/images/banner2.png" alt=""></image>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,78 @@
+.home {
+    background-color: rgb(244, 244, 244);
+    position: relative;
+}
+.home .header {
+    width: 100%;
+    height: 400rpx;
+    background-color: rgb(131,155,251);
+    border-radius: 0 0 40rpx 40rpx;
+}
+.home .container {
+    padding: 0 40rpx;
+    position: absolute;
+    top:200rpx;
+    padding-bottom: 40rpx;
+}
+.home .header-container {
+    padding: 32rpx 40rpx 0 40rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.home .header-container .header-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: -250rpx;
+    color: #FFF;
+}
+.home .header-container .header-info text {
+    margin: 7rpx;
+}
+.home .header .header-container image {
+    width: 112rpx;
+    height: 112rpx;
+    border-radius: 50%;
+}
+.home .header .header-right {
+    position: relative;
+}
+.home .header .header-right image {
+    width: 58rpx;
+    height: 58rpx;
+}
+.home .header .header-right view {
+    width: 12rpx;
+    height: 12rpx;
+    background-color: red;
+    border-radius: 12rpx;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.home .header icon {
+    width: 48rpx;
+    height: 58rpx;
+    color: #FFF;
+}
+.home .today-work-order {
+    height: 328rpx;
+}
+.home .future-work-order,.home .history-work-order {
+    width: 324rpx;
+    margin-top: 50rpx;
+    float: left;
+}
+.home .future-work-order {
+    margin-left: 20rpx;
+}
+.home .footer {
+    width: 100%;
+}
+.home .footer image {
+    width: 100%;
+    height: 244rpx;
+    margin-top: 40rpx;
+}

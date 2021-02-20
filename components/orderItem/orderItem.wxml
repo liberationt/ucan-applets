@@ -1,0 +1,37 @@
+<!--components/orderItem/orderItem.wxml-->
+<view class="orderItem">
+    <view class="header">
+        <view>
+            <image wx:if="{{itemData.sex === '1'}}" src="../../static/images/woman.png"></image>
+            <image wx:if="{{itemData.sex === '0'}}" src="../../static/images/man.png"></image>
+            <image wx:if="{{itemData.sex === ''}}" src="../../static/images/nosex.png"></image>
+        </view>
+        <view>
+            <text>{{itemData.fullName}}</text>
+        </view>
+        <view>
+            <button hidden="{{itemData.orderStatus !== 'serving'}}" class="green">{{itemData.orderStatusName}}</button>
+            <button hidden="{{itemData.orderStatus !== 'to_be_served'}}" class="red">{{itemData.orderStatusName}}</button>
+            <button hidden="{{itemData.orderStatus !== 'service_failed'}}" class="gray">{{itemData.orderStatusName}}</button>
+            <button hidden="{{itemData.orderStatus !== 'service_complete'}}" class="blue">{{itemData.orderStatusName}}</button>
+            <!-- <button class="green">{{itemData.orderStatusName}}</button> -->
+        </view>
+    </view>
+    <view class="container">
+        <view>
+            服务内容: <text>{{itemData.spName}}</text>
+        </view>
+        <view>
+            服务日期: <text>{{itemData.planServiceDate}}</text>
+        </view>
+        <view>
+            服务地址: <text>{{itemData.serviceAddr}}</text>
+        </view>
+        <view wx:if="{{itemData.orderStatus === 'serving'}}" class="signInTime">
+            签到时间: <text>{{itemData.signStartDate}}</text>
+        </view>
+        <view wx:if="{{itemData.orderStatus === 'service_failed'}}" class="signInTime">
+            失败原因: <text>{{itemData.failedRemark}}</text>
+        </view>
+    </view>
+</view>

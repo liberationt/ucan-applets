@@ -1,0 +1,77 @@
+/* pages/login/login.wxss */
+.container {
+    text-align: center;
+}
+image {
+    width: 176rpx;
+    height: 176rpx;
+    margin-top:100rpx;
+    margin-bottom: 50rpx;
+}
+.login-btn{
+    background-color: #839bfb;
+    color: #FFF;
+}
+.form-info {
+    display: flex;
+    flex-direction: column;
+    padding: 0 40rpx;
+}
+.form-info view {
+    height: 64rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 2rpx solid #f0f0f0;
+    padding: 24rpx 0;
+}
+.form-info view icon {
+    display: flex;
+    align-items: center;
+    width: 56rpx;
+    height: 56rpx;
+}
+.form-info view input {
+    padding-left: 24rpx;
+    text-align: left;
+    font-size: 36rpx;
+    font-family: "PingFang SC";
+    color:rgb(13,0,0)
+}
+.form-info .vCode-image{
+    width: 212rpx;
+    height: 64rpx;
+    margin:0
+}
+.form-info .vCode-btn {
+    width: 212rpx;
+    height: 64rpx;
+    text-align: center;
+    font-size: 24rpx;
+    padding: 17rpx 0;
+    margin: 0;
+    color: rgb(131,155,251);
+}
+.cancle-border {
+    border: none !important;
+}
+.form-info .login-btn {
+    margin: 30rpx 0;
+    font-size: 32rpx;
+}
+.form-info .login-btn:active{
+    background-color: #5C79EB;
+}
+.phone-login-text{
+    margin: 0 auto;
+    margin-top: 370rpx;
+    font-size: 24rpx;
+    color: rgb(131,155,251)
+}
+.vCode-time {
+    width: 212rpx;
+    text-align: center;
+    font-size: 24rpx;
+    margin: 0;
+    color: #999999;
+}

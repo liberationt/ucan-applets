@@ -1,0 +1,35 @@
+<!--components/orderDetailCard/orderDetailCard.wxml-->
+<view class="orderHeaderCard" wx:if="{{topData}}">
+    <view class="header-top">
+            <image wx:if="{{topData.sex === '0'}}" src="../../static/images/man.png"></image>
+            <image wx:if="{{topData.sex === '1'}}" src="../../static/images/woman.png"></image>
+            <image wx:if="{{topData.sex === ''}}" src="../../static/images/nosex.png"></image>
+            <text>{{topData.fullName}}</text>
+            <text>{{topData.age}}岁</text>
+            <button hidden="{{topData.orderStatus !== 'serving'}}" class="green">{{topData.orderStatusName}}</button>
+            <button hidden="{{topData.orderStatus !== 'to_be_served'}}" class="red">{{topData.orderStatusName}}</button>
+            <button hidden="{{topData.orderStatus !== 'service_failed'}}" class="gray">{{topData.orderStatusName}}</button>
+            <button hidden="{{topData.orderStatus !== 'service_complete'}}" class="blue">{{topData.orderStatusName}}</button>
+    </view>
+    <view class="header-addr" wx:if="{{topData.orderStatus !== 'to_be_served'}}">
+            <icon class="iconfont iconSigndianhua"></icon>
+            <text wx:if="{{topData.mobile}}">{{topData.mobile}}</text>
+            <text wx:if="{{!topData.mobile && topData.homePhone}}">{{topData.homePhone}}</text>
+            <text wx:if="{{!topData.mobile && !topData.homePhone}}">暂无联系方式</text>
+    </view>
+    <view class="header-addr">
+            <icon class="iconfont iconSigndaohang"></icon>
+            <text>{{topData.serviceAddr}}</text>
+    </view>
+    <view class="header-bottom" wx:if="{{topData.orderStatus === 'to_be_served'}}">
+            <view bindtap="makeCall" data-mobile="{{topData.mobile}}" data-homePhone="{{topData.homePhone}}">
+                <icon class="iconfont iconSigndianhua"></icon>
+                <text>打电话</text>
+            </view>
+            <view class="hr"></view>
+            <view bindtap="toMap" data-latitude="{{topData.latitude}}" data-longitude="{{topData.longitude}}" data-addr="{{topData.serviceAddr}}">
+                <icon class="iconfont iconSigndaohang1"></icon>
+                <text>到这去</text>
+            </view>
+    </view>
+</view>

@@ -1,0 +1,45 @@
+/* pages/my/my.wxss */
+@import "/utils/iconfont.wxss";
+
+.myPage {
+    padding: 40rpx;
+    font-size: 28rpx;
+}
+.myPage .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.myPage .header image {
+    width: 226rpx;
+    height: 226rpx;
+    border-radius: 50%;
+    margin-bottom: 20rpx;
+}
+.myPage .header text {
+    margin: 10rpx 0;
+}
+.myPage .content {
+    margin-top: 100rpx;
+    display: flex;
+    flex-direction: column;
+}
+.myPage .content .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 32rpx 0;
+    border-bottom: 2rpx solid rgba(112,112,112,0.2);
+}
+.myPage .content .info icon {
+    margin-right: 28rpx;
+}
+.myPage .content .arrows {
+    font-size: 34rpx;
+    height: 48rpx;
+    width: 48rpx;
+    margin:0 !important;
+}

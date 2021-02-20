@@ -1,0 +1,90 @@
+/* pages/mySerProvider/mySerProvider.wxss */
+@import "/utils/iconfont.wxss";
+.mySerProviderPage {
+    padding: 40rpx;
+}
+.mySerProviderPage .search {
+    height: 28rpx;
+    border: 2rpx solid rgb(230,230,230);
+    border-radius: 30rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 18rpx 32rpx;
+    margin-bottom: 32rpx;
+    background-color: #FFF;
+}
+.mySerProviderPage .search icon {
+    margin-top: -15rpx;
+}
+.mySerProviderPage .search input {
+    margin-left: 20rpx;
+}
+.mySerProviderPage .serPro-container {
+    background-color: #FFF;
+    padding: 26rpx 0 0 0;
+    margin-bottom: 40rpx;
+}
+.mySerProviderPage .serPro-container .top {
+    border-bottom: 2rpx solid rgb(112,112,112,0.2);
+}
+.mySerProviderPage .serPro-container .top-content {
+    padding: 0 34rpx 28rpx 34rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.mySerProviderPage .serPro-container .top button {
+    width: 120rpx;
+    height: 44rpx;
+    line-height: 44rpx;
+    background-color: rgb(131,155,251);
+    border-radius: 8rpx;
+    font-size: 24rpx;
+    color: #FFF;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+.mySerProviderPage .serPro-container .content {
+    padding: 40rpx;
+}
+.mySerProviderPage .content .images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.mySerProviderPage .content .images image {
+    width: 182rpx;
+    height: 128rpx;
+    border: 2rpx solid rgb(112,112,112);
+    border-radius: 8rpx;
+}
+.mySerProviderPage .content .phone,.addr {
+    margin-top: 24rpx;
+}
+.mySerProviderPage .bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 18rpx 40rpx;
+    border-top: 2rpx solid rgba(112,112,112,0.2);
+}
+.mySerProviderPage .bottom view {
+    display: inline-flex;
+    text-align: center;
+    height: 40rpx;
+}
+.mySerProviderPage .bottom .hr {
+    width: 2rpx;
+    background-color: rgba(112,112,112,0.2);
+}
+.mySerProviderPage .bottom icon {
+    width: 38rpx;
+    height: 36rpx;
+    margin-top: -15rpx;
+}
+.mySerProviderPage .bottom text {
+    margin-left: 10rpx;
+}

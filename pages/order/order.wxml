@@ -1,0 +1,36 @@
+<!--pages/order/order.wxml-->
+<divNavigation navType="logo" bgColor="rgb(244,244,244)" color="rgb(34,34,34)"></divNavigation>
+<scroll-view>
+    <view class="orderPage">
+    <view class="search">
+        <icon class="iconfont iconicon-ss"></icon>
+        <input class="search-img" type="text" value="{{searchValue}}" bindinput="input1"  placeholder="输入老人姓名查询" placeholder-style="font-size:24rpx" bindconfirm="search" confirmType="search" bindinput="toSearch" />
+    </view>
+    <view class="tab">
+        <view wx:for="{{tabs}}" 
+        wx:for-index = "idx" wx:key = "id" bindtap="switchTo" data-index = "{{idx}}">
+            <text>{{item}}</text>
+            <view wx:if="{{tabIndex === idx}}" class="hr"></view>
+        </view>
+    </view>
+    <view class="time-section" wx:if="{{tabIndex === 2}}">
+        <picker mode="date" value="{{submitDate}}" start="{{showDate}}" bindchange="bindDateChange">
+            <view class="picker">
+                <view>日期筛选</view>
+                <view>{{showDate}}</view>
+            </view>
+        </picker>
+    </view>
+    <view class="time-section" wx:if="{{tabIndex === 1}}">
+        <picker mode="selector" range="{{orderStatusArr}}" range-key="name" bindchange="bindOrderStateChange">
+            <view class="picker">
+                <view>工单状态</view>
+                <view>{{orderStatusName}}</view>
+            </view>
+        </picker>
+    </view>
+    <order-item wx:for="{{itemDataArr}}" wx:key="id" itemData="{{item}}" bindtap="toDetail" data-id="{{item.id}}" data-orderStatus="{{item.orderStatus}}"></order-item>
+    <view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>
+    <view class="loading complete" hidden="{{!searchLoadingComplete}}">没有更多了</view> 
+</view>
+</scroll-view>

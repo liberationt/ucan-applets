@@ -1,0 +1,180 @@
+/* pages/orderDetail/orderDetail.wxss */
+.showBigImg {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #222222;
+    opacity: 0.95;
+}
+.showBigImg view{
+    width: 100%;
+    height: 35%;
+}
+.showBigImg image {
+    width: 100%;
+}
+.orderDetailSign {
+    padding: 32rpx 40rpx;
+    background-color: rgba(244, 244, 244);
+    font-size: 28rpx;
+}
+.orderDetailSign .header {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+}
+.orderDetailSign .header .header-top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding:28rpx 32rpx 34rpx 40rpx;
+}
+.orderDetailSign .header .header-addr {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding:0 60rpx;
+    font-size: 28rpx;
+}
+.orderDetailSign .header image {
+    width: 80rpx;
+    height: 80rpx;
+    vertical-align: middle;
+}
+.orderDetailSign .header  text {
+    vertical-align: middle;
+    font-size: 28rpx;
+    margin-left: 32rpx;
+}
+.orderDetailSign .header-top button {
+    width: 120rpx;
+    height: 44rpx;
+    font-size: 24rpx;
+    color: #FFF;
+    padding: 0;
+    line-height: 44rpx;
+    margin-right: 0;
+}
+.orderDetailSign .header .header-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 32rpx;
+    border-top: 2rpx solid rgb(112,112,112,0.2);
+}
+.orderDetailSign .header-bottom view {
+    padding: 16rpx 0;
+    display: inline-flex;
+    text-align: center;
+    align-items: baseline;
+}
+.orderDetailSign .header-bottom icon {
+    width: 38rpx;
+    height: 36rpx;
+}
+.orderDetailSign .header-bottom text {
+    margin-left: 10rpx;
+}
+.green {
+    background-color: rgb(112,182,3);
+}
+.red {
+    background-color: rgb(170,50,6);
+}
+.blue {
+    background-color: rgb(131,155,251);
+}
+.gray {
+    background-color: rgb(112,112,112);
+}
+.orderDetailSign .content .titleContent{
+    background-color: #FFF;
+    padding:16rpx 32rpx;
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+    margin-top: 16rpx;
+}
+.orderDetailSign .titleContent view{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 16rpx 0;
+}
+.orderDetailSign .titleContent view text {
+    width: 65%;
+}
+.orderDetailSign .footer {
+    padding: 16rpx 30rpx;
+}
+.orderDetailSign .footer button {
+    height: 80rpx;
+    width: 100%;
+    background-color: rgb(131,155,251);
+    color: #FFF !important;
+    font-size: 32rpx;
+    border-radius: 8rpx;
+}
+
+.disableSignIn{
+    background-color: rgb(112,112,112) !important;
+}
+
+.addrInfo {
+    background-color: #FFF;
+    width: 100%;
+    height: auto;
+    margin-top: 20rpx;
+}
+.addrInfo .signAddr{
+    display: flex;
+    flex:1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.addrInfo .signAddr:first-child{
+    padding: 32rpx;
+}
+.addrInfo .signAddr:last-child{
+    padding: 0 32rpx 32rpx 32rpx;
+}
+.addrInfo .left-btn{
+    width: 100rpx;
+    height: 100rpx;
+    color:#000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 8rpx;
+    align-items: center;
+    margin-right: 10rpx;
+}
+.addrInfo .center-addr{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: baseline;
+    font-size: 24rpx;
+    margin-top: -20rpx;
+}
+.addrInfo .right-image{
+    width: 100rpx;
+    height: 100rpx;
+    position: relative;
+    border: 2rpx dotted rgb(131,155,251);
+    z-index: 1;
+    margin-left: 10rpx;
+}
+.addrInfo .right-image .sign-photo{
+    width: 100rpx;
+    height: 100rpx;
+    left: 0;
+    position: absolute;
+    z-index: 3;
+}
+.addrInfo text {
+    line-height:36rpx
+}

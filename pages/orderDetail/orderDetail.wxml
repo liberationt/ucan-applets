@@ -1,0 +1,74 @@
+<!--pages/orderDetail/orderDetail.wxml-->
+<divNavigation titleName="工单详情" navType="icon" bgColor="rgb(244,244,244)" color="rgb(34,34,34)"></divNavigation>
+<view class="showBigImg" wx:if="{{showBigImgStatus}}">
+    <view bindtap="cancleBigImg"></view>
+    <image src="{{bigImgUrl}}"></image>
+    <view bindtap="cancleBigImg"></view>
+</view>
+<view class="orderDetail">
+    <orderDetailCard topData="{{paramData}}"></orderDetailCard>
+    <view class="addr-content">
+        <view class="left-btn">
+            <text style="font-size:24rpx">{{actualServiceDate}}</text>
+            <text>已签到</text>
+        </view>
+        <view class="center-addr">
+            <icon class="iconfont iconSigndaohang"></icon>
+            <text>{{paramData.signInAddress}}</text>
+        </view>
+        <view class="right-image">
+            <image  class="sign-photo {{!signInImage ? 'noneEvents' : '' }}" src="{{signInImage}}" bindtap="lookSignBigImg" data-imgUrl="{{signInImage}}"></image>
+            <image class="right-image-delete" src="/static/images/delete.png" bindtap="deleteImgFunc" data-type="signIn"></image>
+            <image wx:if="{{!signInImage}}" class="image-plus" src="/static/images/plus.png" bindtap="addImage" data-type="signIn"></image>
+        </view>
+    </view>
+    <contentCard wx:for="{{contentArrData}}" wx:key="id" objData="{{item}}" bind:lookBigImg="lookBigImg" orderStatus = "{{paramData.orderStatus}}"></contentCard>
+    <view class="orderDetail-bottom">
+        <view class="bottom-view">
+            服务失败:
+            <radio-group bindchange="radioChange">
+                <view wx:for="{{radioData}}" wx:key="id">
+                    <label class="radio-label">
+                        <view>
+                            <radio value ="{{item.value}}" checked="{{paramData.isFailed === item.value ? true : false}}"/>
+                        </view>
+                        <view class="radio-name">{{item.name}}</view>
+                    </label>
+                </view>
+            </radio-group>
+        </view>
+        <view class="bottom-view failReason" wx:if="{{paramData.isFailed === '1'}}">失败原因:
+            <textarea placeholder="请填写失败原因" auto-height maxlength = "50" value="{{paramData.failedRemark}}" bindinput="inputValue">
+            </textarea>
+            <text>*</text>
+        </view>
+        <view class="speechEvaluation">
+            <text class="spe-title">请老人使用语音对本次服务做出评价</text>
+            <view class="record" wx:if="{{!recordingState}}" bindtap="playRecording">
+                <view class="speech-left">
+                    <icon class="iconfont iconicon-yy" wx:if="{{playRecordStatus}}"></icon>
+                    <image wx:if="{{!playRecordStatus}}" src="/static/images/yuyin.gif"></image>
+                </view>
+                <view class="speech-right">
+                    <text>{{voiceTimeLen}}“</text>
+                </view>
+            </view>
+            <view class="speechBtn">
+                <button wx:if="{{recordingState}}" bindlongpress="touchStartC" bindtouchend="touchEndC" bindtouchcancel="touchEndC">
+                    <icon class="iconfont iconicon-anzhushuohua"></icon>
+                    按住讲话
+                </button>
+                <button wx:else="{{recordingState}}" bindlongpress="touchStartC" bindtouchend="touchEndC" bindtouchcancel="touchEndC">
+                    <icon class="iconfont iconicon-anzhushuohua"></icon>
+                按住重新讲话
+                </button>
+            </view>
+        </view>
+        <view class="addr-content" wx:if="{{paramData.orderStatus === 'serving'}}">
+            <view class="left-btn green" bindtap="signOut">
+                <text>待签退</text>
+            </view>
+        </view>
+    </view>
+    
+</view>

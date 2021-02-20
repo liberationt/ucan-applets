@@ -1,0 +1,6 @@
+<!--pages/message/message.wxml-->
+<divNavigation titleName="我的通知" navType="icon" bgColor="rgb(244,244,244)" color="rgb(34,34,34)"></divNavigation>
+<view class="messagePage">
+    <image src="/static/images/message.png"></image>
+    <text>暂无新消息</text>
+</view>

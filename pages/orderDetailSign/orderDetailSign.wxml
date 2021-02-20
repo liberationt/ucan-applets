@@ -1,0 +1,45 @@
+<!--pages/orderDetail/orderDetail.wxml-->
+<divNavigation titleName="工单详情" navType="icon" bgColor="rgb(244,244,244)" color="rgb(34,34,34)"></divNavigation>
+<view class="showBigImg" wx:if="{{showBigImgStatus}}">
+    <view bindtap="cancleBigImg"></view>
+    <image src="{{bigImgUrl}}"></image>
+    <view bindtap="cancleBigImg"></view>
+</view>
+<view class="orderDetailSign">
+    <orderDetailCard topData="{{contentData}}"></orderDetailCard>
+    <view class="addrInfo" wx:if="{{contentData.orderStatus === 'service_complete' || contentData.orderStatus === 'service_failed'}}">
+        <view class="signAddr">
+            <view class="left-btn">
+                <text>已签到</text>
+                <text style="font-size:24rpx">{{signInTime}}</text>
+            </view>
+            <view class="center-addr" wx:if="{{contentData.signInAddress}}">
+                <icon class="iconfont iconSigndaohang"></icon>
+                <text>{{contentData.signInAddress}}</text>
+            </view>
+            <view class="right-image">
+                <image class="sign-photo" src="{{signInImageUrl}}" bindtap="lookSignBigImg" data-imgUrl="{{signInImageUrl}}"></image>
+            </view>
+        </view>
+        <view class="signAddr">
+            <view class="left-btn">
+                <text>已签退</text>
+                <text style="font-size:24rpx">{{signOutTime}}</text>
+            </view>
+            <view class="center-addr" wx:if="{{contentData.signOutAddress}}">
+                <icon class="iconfont iconSigndaohang"></icon>
+                <text>{{contentData.signOutAddress}}</text>
+            </view>
+            <view class="right-image">
+                <image class="sign-photo" src="{{signOutImageUrl}}" bindtap="lookSignBigImg" data-imgUrl="{{signOutImageUrl}}"></image>
+            </view>
+        </view>
+    </view>
+    <view class="content">
+        <contentCard objData="{{contentData}}" orderStatus = "{{contentData.orderStatus}}"></contentCard>
+        <contentCard wx:for="{{contentArrData}}" bind:lookBigImg="lookBigImg" wx:key="id" objData="{{item}}" orderStatus = "{{contentData.orderStatus}}"></contentCard>
+    </view>
+    <view class="footer">
+        <button bindtap="enterCenter" wx:if="{{contentData.orderStatus === 'to_be_served' && orderSet !== '1'}}">开始签到</button>
+    </view>
+</view>

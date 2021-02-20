@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "order-item": "/components/orderItem/orderItem",
+    "divNavigation": "/components/divNavigation/divNavigation"
+  },
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance":100
+}

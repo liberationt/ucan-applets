@@ -1,0 +1,39 @@
+<!--pages/my/my.wxml-->
+<divNavigation navType="logo" bgColor="rgb(244,244,244)" color="rgb(34,34,34)"></divNavigation>
+<view class="myPage">
+    <view class="header" bindtap="toMyInfo">
+        <image src="{{avatarUrl}}"></image>
+        <text>{{userInfo.loginName}}</text>
+        <text>{{userInfo.mobile}}</text>
+    </view>
+    <view class="content">
+        <view class="info" bindtap="toMySerProvider">
+            <view>
+                <icon class="iconfont iconicon-fwsxx"></icon>
+            <text>服务商信息</text>
+            </view>
+            <view>
+                <icon class="iconfont iconicon-fh arrows"></icon>
+            </view>
+        </view>
+        <view class="info" bindtap="unBindWx">
+            <view>
+                <icon class="iconfont iconicon-wx"></icon>
+            <text>绑定微信</text>
+            </view>
+            <view>
+               已绑定 
+               <icon class="iconfont iconicon-fh arrows"></icon>
+            </view>
+        </view>
+        <view class="info" style="border:none">
+            <view>
+                <icon class="iconfont iconicon-dqbb"></icon>
+            <text>当前版本</text>
+            </view>
+            <view>
+                V 1.0
+            </view>
+        </view>
+    </view>
+</view>

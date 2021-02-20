@@ -1,0 +1,7 @@
+/**app.wxss**/
+@import './utils/iconfont.wxss';
+page{
+    background-color: rgba(244, 244, 244);
+    height: 100vh;
+    font-size: 28rpx;
+}

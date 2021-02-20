@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "orderDetailCard":"/components/orderDetailCard/orderDetailCard",
+    "contentCard":"/components/contentCard/contentCard",
+    "divNavigation": "/components/divNavigation/divNavigation"
+  }
+}

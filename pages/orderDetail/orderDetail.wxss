@@ -1,0 +1,193 @@
+/* pages/orderDetail/orderDetail.wxss */
+@import '/utils/iconfont.wxss';
+.showBigImg {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #222222;
+    opacity: 0.95;
+}
+.showBigImg view{
+    width: 100%;
+    height: 35%;
+}
+.showBigImg image {
+    width: 100%;
+}
+.orderDetail {
+    padding: 32rpx 40rpx;
+    background-color: rgba(244, 244, 244);
+    font-size: 28rpx;
+}
+.orderDetail .addr-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32rpx 32rpx 32rpx;
+    background-color: #FFF;
+}
+.orderDetail .addr-content .left-btn {
+    width: 100rpx;
+    height: 100rpx;
+    background-color: rgb(131,155,251);
+    color:#FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 8rpx;
+    align-items: center;
+}
+.orderDetail .addr-content:last-child{
+    margin-top: 20rpx;
+}
+.orderDetail .addr-content .center-addr {
+    display: flex;
+    flex:1;
+    flex-direction: row;
+    align-items: baseline;
+    font-size: 24rpx;
+    margin-top: -20rpx;
+}
+.orderDetail .addr-content .center-addr icon {
+    margin: 0 20rpx;
+    font-size: 24rpx;
+    color: rgb(112,112,112);
+}
+.orderDetail .addr-content .center-addr text{
+    line-height:36rpx;
+}
+.orderDetail .addr-content .right-image {
+    width: 100rpx;
+    height: 100rpx;
+    position: relative;
+    border: 2rpx dotted rgb(131,155,251);
+    z-index: 1;
+}
+.orderDetail .addr-content .right-image .sign-photo{
+    width: 100rpx;
+    height: 100rpx;
+    left: 0;
+    position: absolute;
+    /* pointer-events:none; */
+    z-index: 3;
+}
+.noneEvents {
+    pointer-events:none;
+}
+.orderDetail .addr-content .right-image .right-image-delete {
+    width: 28rpx;
+    height: 28rpx;
+    position: absolute;
+    color: rgb(112,112,112);
+    right: -10rpx;
+    top: -10rpx;
+    z-index: 4;
+}
+.orderDetail .addr-content .right-image .image-plus {
+    position: absolute;
+    left: 0;
+    width: 80rpx;
+    height: 80rpx;
+    margin: 10rpx;
+    z-index: 2;
+}
+.orderDetail-bottom {
+    margin-top: 16rpx;
+    background-color: #FFF;
+}
+.orderDetail-bottom .bottom-view {
+    padding: 40rpx 40rpx 0 40rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.orderDetail-bottom .failReason {
+    position: relative;
+}
+.orderDetail-bottom .failReason text {
+    position: absolute;
+    color: red;
+    left: 24rpx;
+}
+.orderDetail-bottom .bottom-view view,textarea {
+    width: 65%;
+}
+.orderDetail-bottom .bottom-view radio-group{
+    display: flex;
+    flex-direction: row;
+    width: 65%;
+}
+.bottom-view .radio-label {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.bottom-view .radio-label .radio-name{
+    margin-left: 20rpx;
+}
+.orderDetail-bottom textarea {
+    height: 78rpx;
+    width: 60%;
+    border-radius: 8rpx;
+    background-color: rgb(242,242,242);
+    padding: 12rpx 20rpx;
+}
+.speechEvaluation{
+    padding: 0 40rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.speechEvaluation .spe-title{
+    width: 100% !important;
+    margin: 34rpx 0;
+}
+.record{
+    height: 60rpx;
+    width: 100%;
+    margin-bottom: 34rpx;
+    border:2rpx solid rgb(244, 244, 244);
+    border-radius: 10rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.speechEvaluation .record image{
+    width: 30rpx;
+    height: 30rpx;
+    margin-left: 20rpx;
+    vertical-align: middle;
+}
+.speechEvaluation .record icon {
+    margin-bottom: 15rpx;
+    width: 30rpx;
+    margin-left: 20rpx;
+    font-size: 30rpx;
+    vertical-align: middle;
+}
+.speechEvaluation .record text{
+    width: 60%;
+    text-align: right;
+    margin-left: 30rpx;
+    vertical-align: middle;
+}
+.speechEvaluation .speechBtn {
+    width: 100%;
+    border-radius: 8rpx;
+}
+.speechEvaluation .speechBtn button{
+    background-color: rgb(131,155,251);
+    width: 100%;
+    color: #FFF;
+    font-weight: normal;
+}
+.speechEvaluation .speechBtn button:active{
+    background-color: green;
+}
+.green {
+    background-color: rgb(112,182,3) !important;
+}

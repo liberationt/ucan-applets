@@ -1,0 +1,80 @@
+<!--components/contentCard/contentCard.wxml-->
+<view class="contentCard">
+    <view wx:if="{{objData.orderNo}}">
+        工单编号：<text>{{objData.orderNo}}</text>
+    </view>
+    <view wx:if="{{objData.planServiceDate}}">
+        预计服务日期：<text>{{objData.planServiceDate}}</text>
+    </view>
+    <view wx:if="{{objData.actualServiceDate}}">
+        实际服务日期：<text>{{objData.actualServiceDate}}</text>
+    </view>
+    <view wx:if="{{objData.planServiceTime}}">
+        预计服务时长：<text>{{objData.planServiceTime}}分钟</text>
+    </view>
+    <view wx:if="{{objData.actualServiceTime}}">
+        实际服务时长：<text>{{objData.actualServiceTime}}分钟</text>
+    </view>
+    <view style="color:rgb(170,50,6)" wx:if="{{objData.isFailed}}">
+        服务失败：<text wx:if="{{objData.isFailed === '1'}}">是</text>
+                 <text wx:if="{{objData.isFailed === '0'}}">否</text>
+    </view>
+    <view style="color:rgb(170,50,6)" wx:if="{{objData.failedRemark}}">
+        失败原因：<text>{{objData.failedRemark}}</text>
+    </view>
+    <view style="color:rgb(170,50,6)" wx:if="{{objData.isAbnormal && (orderStatus === 'service_failed' || orderStatus === 'service_complete')}}">
+        服务异常：<text wx:if="{{objData.isAbnormal === 'Y'}}">是</text>
+                 <text wx:if="{{objData.isAbnormal === 'N'}}">否</text>
+    </view>
+    <view style="color:rgb(170,50,6)" wx:if="{{objData.abnormalRemark && (orderStatus === 'service_failed' || orderStatus === 'service_complete')}}">
+        异常原因：<text>{{objData.abnormalRemark}}</text>
+    </view>
+    <view wx:if="{{objData.smName}}">
+        套餐名称：<text>{{objData.smName}}</text>
+    </view>
+    <view wx:if="{{objData.smTypeName}}">
+        服务类型：<text>{{objData.smTypeName}}</text>
+    </view>
+    <view wx:if="{{objData.spName}}">
+        服务项目：<text>{{objData.spName}}</text>
+    </view>
+    <view wx:if="{{objData.spContent}}">
+        服务内容：<text>{{objData.spContent}}</text>
+    </view>
+    <view wx:if="{{objData.planServiceTimeLen}}">
+        服务时长：<text>{{objData.planServiceTimeLen}}分钟</text>
+    </view>
+    <view wx:if="{{objData.servicePrice}}">
+        服务单价：<text>{{objData.servicePrice}}元</text>
+    </view>
+    <view wx:if="{{objData.evaluate}}">
+        服务评价：
+        <view class="record" wx:if="{{!recordingState}}" bindtap="playRecording">
+            <view>
+                <icon wx:if="{{!playRecording && objData.appraiseTime}}" class="iconfont iconicon-yy"></icon>
+                <image wx:if="{{playRecording}}" src="/static/images/yuyin.gif"></image>
+            </view>
+            <text wx:if="{{objData.appraiseTime}}">{{objData.appraiseTime}}“</text>
+        </view>
+    </view>
+    <view wx:if="{{objData.images && (orderStatus === 'service_failed' || orderStatus === 'service_complete')}}">
+        服务照片：
+        <view class="image-container">
+            <view class="image-view" wx:for="{{objData.images}}" wx:key="id">
+                <image class="image-content" src="{{imgUrl + item.imgUrl}}" bindtap="magnify" data-url="{{imgUrl + item.imgUrl}}"></image>
+            </view>
+        </view>
+    </view>
+    <view wx:if="{{orderStatus === 'serving'}}">
+        服务照片：
+        <view class="image-container">
+            <view class="image-view" wx:for="{{objData.images}}" wx:key="id">
+                <image class="image-content" src="{{imgUrl + item.imgUrl}}" bindtap="magnify" data-url="{{imgUrl + item.imgUrl}}"></image>
+                <image class="image-delete" src="/static/images/delete.png" bindtap="deleteImage" data-id="{{item.id}}" data-idx="{{index}}"></image>
+            </view>
+            <view class="image-view" wx:if="{{objData.images.length < 6}}">
+                <image class="image-plus" src="/static/images/plus.png" bindtap="addImage"></image>
+            </view>
+        </view>
+    </view>
+</view>

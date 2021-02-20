@@ -1,0 +1,34 @@
+<!--pages/mySerProvider/mySerProvider.wxml-->
+<divNavigation titleName="我的服务商" navType="icon" bgColor="rgb(244,244,244)" color="rgb(34,34,34)"></divNavigation>
+<view class="mySerProviderPage">
+    <view class="search">
+        <icon class="iconfont iconicon-ss"></icon>
+        <input class="search-img" type="text" value="{{searchValue}}" bindinput="input1"  placeholder="输入绑定服务商查询" placeholder-style="font-size:24rpx" bindconfirm="toSearch" />
+    </view>
+    <view class="serPro-container" wx:for="{{serInfo}}" wx:key="id">
+        <view class="top">
+            <view class="top-content">
+                <text>{{item.spName}}</text>
+            <button>已绑定</button>
+            </view>
+        </view>
+        <view class="content">
+            <!-- <view class="images">
+                <image src="{{item}}" wx:for="{{item.images}}" wx:key="id"></image>
+            </view> -->
+            <view class="phone">咨询电话：<text>{{item.phone}}</text></view>
+            <view class="addr">详细地址：<text>{{item.addr}}</text></view>
+        </view>
+        <view class="bottom">
+            <view>
+                <icon class="iconfont iconSigndianhua"></icon>
+                <text bindtap="makeCall" data-num="{{item.phone}}">打电话</text>
+            </view>
+            <view class="hr"></view>
+            <view bindtap="toMap" data-latitude="{{item.latitude}}" data-longitude="{{item.longitude}}" data-addr="{{item.addr}}">
+                <icon class="iconfont iconSigndaohang1"></icon>
+                <text>到这去</text>
+            </view>
+        </view>
+    </view>
+</view>

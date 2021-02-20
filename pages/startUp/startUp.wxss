@@ -1,0 +1,100 @@
+/* pages/startUp/startUp.wxss */
+.startUp {
+    text-align: center;
+    padding:100rpx 70rpx 0 70rpx;
+}
+.startUp image {
+    width: 176rpx;
+    height: 176rpx;
+    margin-bottom: 50rpx;
+}
+.startUp .info text{
+    padding:0 70rpx;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 28rpx;
+    line-height: 40rpx;
+}
+.login-btn-container {
+    margin-top: 50rpx;
+    width: 100%;
+}
+.login-btn{
+    background-color: #839bfb;
+    color: #FFF;
+}
+.login-btn:active{
+    background-color: #5C79EB;
+}
+.containner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+    color:#FFF
+}
+.modal-view {
+    width: 100%;
+    height: 100%;
+    background-color: #808080;
+    opacity: 0.9;
+    position: absolute;
+    z-index: 101;
+}
+.myShowModal {
+    height: 50%;
+    position: absolute;
+    left: 10%;
+    right:10%;
+    top: 30%;
+    z-index: 102;
+    border-radius: 3%;
+    background-color: #FFF;
+}
+.myShowModal .title {
+    height: 15%;
+    background-color: rgb(131,155,251);
+    display: flex;
+    align-items: center;
+    border-radius: 4% 4% 0 0;
+}
+.myShowModal .title view{
+    width: 100%;
+    text-align: center;
+    font-size:40rpx;
+}
+.myShowModal .content {
+    height: 55%;
+    color: #000000;
+    padding: 5%;
+}
+.myShowModal .content .c-title {
+    font-weight: bold;
+}
+.myShowModal .content .c-content view{
+    padding:2.5%
+}
+.myShowModal .btn {
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.myShowModal .btn .exit {
+    width: 38%;
+    padding: 20rpx 0rpx;
+    text-align: center;
+    border:2rpx solid rgb(131,155,251);
+    font-size:26rpx;
+    margin-left: 8%;
+    border-radius: 10rpx;
+    color:rgb(131,155,251)
+}
+.myShowModal .btn button{
+    width: 38%;
+    padding: 20rpx 0rpx;
+    font-size:26rpx;
+    border:2rpx solid rgb(131,155,251);
+    border-radius: 10rpx;
+}

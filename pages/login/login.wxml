@@ -1,0 +1,48 @@
+<!--pages/login/login.wxml  登录页面-->
+<divNavigation navType="" bgColor="rgb(244,244,244)" color="rgb(34,34,34)"></divNavigation>
+<view class="container">
+    <view class="img-logo">
+        <image src="../../static/images/logo.png" alt="" ></image>
+    </view>
+    <form action="" wx:if="{{phoneState === false}}" bindsubmit="userSubmit">
+        <view class="form-info">
+        <view>
+            <icon class="iconfont iconSignzhanhao"></icon>
+            <input type="text" name="user" placeholder-style="color:rgb(13,0,0)" placeholder="请输入账号" maxlength='18' />{{userForm.user}}
+        </view>
+        <view>
+            <icon class="iconfont iconSignmima"></icon>
+            <input type="text" password name="userPassWord" 
+            placeholder-style="color:rgb(13,0,0)" placeholder="请输入密码" maxlength='18' />{{userForm.pwd}}
+        </view>
+        <view class="phone-login-text cancle-border">
+            <text bindtap="swichEvent">使用手机验证码登录</text>
+        </view>
+        <view class="cancle-border">
+            <button class="login-btn" style="width:100%" formType="submit">登录</button>
+        </view>
+    </view>
+    </form>
+    <form action="" wx:if="{{phoneState === true}}" bindsubmit="userSubmit">
+        <view class="form-info">
+        <view>
+            <icon class="iconfont iconSignshoujihao"></icon>
+            <input type="text" name="tel" value="{{tel}}"
+            placeholder-style="color:rgb(13,0,0)" placeholder="请输入手机号" bindinput="bindKeyInput"/>
+        </view>
+        <view>
+            <icon class="iconfont iconSignyanzhengma"></icon>
+            <input type="text" password value="{{vCode}}"
+            placeholder-style="color:rgb(13,0,0)" name="vCode" placeholder="请输入验证码" />
+            <button bindtap="sendcode" disabled="{{smsFlag}}" style='color:{{sendColor}};' class="vCode-btn">{{sendTime}}</button>
+        </view>
+        <view class="phone-login-text cancle-border">
+            <text bindtap="swichEvent">使用账号密码登录</text>
+        </view>
+        <view class="cancle-border">
+            <button class="login-btn" style="width:100%" formType="submit">登录</button>
+        </view>
+    </view>
+    </form>
+</view>
+

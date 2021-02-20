@@ -1,0 +1,33 @@
+<!--pages/startUp/startUp.wxml-->
+<view class="containner" wx:if="{{showModalStatus}}">
+    <view class="modal-view"></view>
+    <view class="myShowModal">
+        <view class="title">
+            <view>温馨提示</view>
+        </view>
+        <view class="content">
+            <view class="c-title">亲爱的服务人员，感谢您的信任。</view>
+            <view class="c-content">
+                <view>我们向您说明：</view>
+                <view>1、为了您更好的为老人提供居家服务，需要您使用服务商提供的账号和密码登录。</view>
+                <view>2、我们不会将您的账号信息用于其他用途。</view>
+            </view>
+        </view>
+        <view class="btn">
+            <navigator class="exit" target="miniProgram" open-type="exit" bindtap="cancel">退出程序</navigator>
+            <button class="login-btn" wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+            <view wx:else>请升级微信版本</view>
+        </view>
+    </view>
+</view>
+<divNavigation navType="" bgColor="#839BFB" color="#FFF"></divNavigation>
+<view class="startUp">
+    <view class="img-logo">
+        <image src="../../static/images/logo.png" alt="" ></image>
+    </view>
+    <view wx:if="{{!showModalStatus}}">
+        <view class="info">
+            <text>微信授权登录后请放心使用、您的信息和数据将受到保护</text>
+        </view>
+    </view>
+</view>

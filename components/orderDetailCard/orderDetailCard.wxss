@@ -1,0 +1,84 @@
+/* components/orderDetailCard/orderDetailCard.wxss */
+@import '/utils/iconfont.wxss';
+.orderHeaderCard {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+}
+.orderHeaderCard  .header-top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding:28rpx 32rpx 20rpx 40rpx;
+}
+.orderHeaderCard .header-addr {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding:0 60rpx;
+    font-size: 28rpx;
+}
+.orderHeaderCard .header-addr:last-child{
+    margin-bottom: 20rpx;
+}
+.orderHeaderCard .header-addr icon {
+    font-size: 24rpx;
+    color: rgb(112,112,112);
+}
+.orderHeaderCard image {
+    width: 80rpx;
+    height: 80rpx;
+    vertical-align: middle;
+}
+.orderHeaderCard  text {
+    vertical-align: middle;
+    font-size: 28rpx;
+    margin-left: 32rpx;
+}
+.orderHeaderCard .header-top button {
+    width: 120rpx;
+    height: 44rpx;
+    font-size: 24rpx;
+    color: #FFF;
+    padding: 0;
+    line-height: 44rpx;
+    margin-right: 0;
+}
+.orderHeaderCard .header-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 16rpx 0;
+    margin-top: 32rpx;
+    border-top: 2rpx solid rgba(112,112,112,0.2);
+    border-bottom: 2rpx solid rgba(112,112,112,0.2);
+}
+.orderHeaderCard .header-bottom view {
+    display: inline-flex;
+    text-align: center;
+    height: 40rpx;
+}
+.orderHeaderCard .header-bottom .hr {
+    width: 2rpx;
+    background-color: rgba(112,112,112,0.2);
+}
+.orderHeaderCard .header-bottom icon {
+    width: 38rpx;
+    height: 36rpx;
+    margin-top: -15rpx;
+}
+.orderHeaderCard .header-bottom text {
+    margin-left: 10rpx;
+}
+.green {
+    background-color: rgb(112,182,3);
+}
+.red {
+    background-color: rgb(170,50,6);
+}
+.blue {
+    background-color: rgb(131,155,251);
+}
+.gray {
+    background-color: rgb(112,112,112);
+}

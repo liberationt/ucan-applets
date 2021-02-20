@@ -1,0 +1,66 @@
+/* components/orderItem/orderItem.wxss */
+.orderItem {
+    overflow: auto;
+    background-color: #FFF;
+    margin-bottom: 16rpx;
+}
+.orderItem .header {
+    padding: 10rpx 32rpx;
+    border-bottom: 2rpx solid rgb(112,112,112,0.2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.orderItem .header image {
+    width: 58rpx;
+    height: 58rpx;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+.orderItem .header text {
+    font-size: 28rpx;
+    margin-left: -100rpx;
+    /* font-family: "PingFang SC"; */
+}
+.orderItem .header button {
+    width: 120rpx;
+    height: 44rpx;
+    font-size: 24rpx;
+    color: #FFF;
+    padding: 0;
+    line-height: 44rpx;
+}
+.green {
+    background-color: rgb(112,182,3);
+}
+.red {
+    background-color: rgb(170,50,6);
+}
+.blue {
+    background-color: rgb(131,155,251);
+}
+.gray {
+    background-color: rgb(112,112,112);
+}
+.orderItem .container {
+    overflow: auto;
+    padding: 0 32rpx;
+    padding-bottom: 32rpx;
+    font-size: 28rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.orderItem .container view {
+    display: flex;
+    align-items: baseline;
+    margin-top: 30rpx;
+}
+.orderItem .container text {
+    margin-left: 22rpx;
+    width: 70%;
+}
+.orderItem .container .signInTime text{
+    color: rgb(170,50,6);
+}

@@ -1,0 +1,86 @@
+/* components/contentCard/contentCard.wxss */
+@import '/utils/iconfont.wxss';
+.contentCard{
+    background-color: #FFF;
+    padding:16rpx 32rpx;
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+    margin-top: 16rpx;
+}
+.contentCard > view{
+    display: flex;
+    /* align-items: baseline; */
+    justify-content: space-between;
+    padding: 16rpx 0;
+}
+.contentCard view text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 65%;
+}
+.contentCard .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding: 0;
+    /* height: 250rpx; */
+    width: 65%;
+}
+.contentCard .image-container .image-view{
+    padding: 0;
+    width: 90rpx;
+    height: 90rpx;
+    border: 2rpx dotted rgb(131,155,251);
+    position: relative;
+    margin-right: 30rpx;
+    margin-bottom: 20rpx;
+}
+.image-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.image-plus {
+    width: 70rpx;
+    height: 70rpx;
+    position: absolute;
+    top: 10rpx;
+    right: 10rpx;
+}
+.image-delete {
+    width: 50rpx;
+    height: 50rpx;
+    position: absolute;
+    top: -20rpx;
+    right: -20rpx;
+}
+.contentCard .record{
+    height: 50rpx;
+    width: 65%;
+    border:2rpx solid rgb(244, 244, 244);
+    border-radius: 10rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.contentCard .record icon {
+    height: 40rpx;
+    margin-bottom: 25rpx;
+    margin-left: 20rpx;
+    font-size: 30rpx;
+    vertical-align: middle;
+}
+.contentCard .record image{
+    width: 40rpx;
+    height: 40rpx;
+    margin-left: 10rpx;
+    vertical-align: middle;
+}
+.contentCard .record text{
+    height: 40rpx;
+    text-align: left;
+    margin-left: 30rpx;
+    vertical-align: middle;
+}
